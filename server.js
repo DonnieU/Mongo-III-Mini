@@ -11,13 +11,8 @@ server.use(bodyParser.json());
 
 mongoose.Promise = global.Promise;
 const connect = mongoose.connect(
-<<<<<<< HEAD
   'mongodb://localhost/post-db',
   { useMongoClient: true }
-=======
-    'mongodb://localhost/post-db',
-    { useMongoClient: true }
->>>>>>> 37dd71f7f036164d2f3b4ebc1177bef3455b1875
 );
 
 connect.then(() => {
