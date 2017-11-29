@@ -21,7 +21,11 @@ and the Comment model. The Comment model depends upon the Post model. You'll
 notice that the in the Post model schema we have this line
 
 ```
+<<<<<<< HEAD
 comments: [{ type: mongoose.Schema.Types.ObjectID, ref: 'Comment' }]
+=======
+comments: [{ type: mongoose.Schema.Types.Number, ref: 'Comment' }]
+>>>>>>> 37dd71f7f036164d2f3b4ebc1177bef3455b1875
 ```
 
 This line specifies the `comments` field on the Post schema, which is an array

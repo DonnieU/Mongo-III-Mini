@@ -1,12 +1,18 @@
 const mongoose = require('mongoose');
 
+<<<<<<< HEAD
 const Post = require('../models/post');
 const Comment = require('../models/comment');
+=======
+const Post = mongoose.model('Post');
+const Comment = mongoose.model('Comment');
+>>>>>>> 37dd71f7f036164d2f3b4ebc1177bef3455b1875
 
 const STATUS_USER_ERROR = 422;
 
 /* Fill in each of the below controller methods */
 const createPost = (req, res) => {
+<<<<<<< HEAD
   const { title, text } = req.body;
   const newPost = new Post({ title, text });
   // newPost.save((err, createdPost) => {
@@ -49,6 +55,13 @@ const listPosts = (req, res) => {
     .catch((err) => {
       res.status(STATUS_USER_ERROR).json(err);
     });
+=======
+
+};
+
+const listPosts = (req, res) => {
+
+>>>>>>> 37dd71f7f036164d2f3b4ebc1177bef3455b1875
 };
 
 const findPost = (req, res) => {
@@ -56,6 +69,7 @@ const findPost = (req, res) => {
 };
 
 const addComment = (req, res) => {
+<<<<<<< HEAD
   const { id } = req.params;
   const { text } = req.body;
   const newComment = new Comment({ _parent: id, text });
@@ -75,6 +89,9 @@ const addComment = (req, res) => {
     .catch((err) => {
       res.status(STATUS_USER_ERROR).json({ errorMessage: err.message });
     });
+=======
+
+>>>>>>> 37dd71f7f036164d2f3b4ebc1177bef3455b1875
 };
 
 // In this function, we need to delete the comment document
